@@ -48,7 +48,7 @@ def main():
 
     print("Starting Download")
 
-    while not url.endswith('#'):
+    while not url.endswith('#') or not (re.findall('/1/', url)):
         log.write("--------------------- \n")
 
         log.write("Download Number: %d \n" % current_amount_downloaded)
